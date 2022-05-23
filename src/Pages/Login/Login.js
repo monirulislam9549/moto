@@ -1,20 +1,37 @@
 import React from 'react';
 import auth from '../../firebase.init';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
+import Loading from '../Shared/Loading';
 
 
 const Login = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
+    let signInError;
 
-    if (user) {
-        console.log(user);
+    if (loading || gLoading) {
+        return <Loading></Loading>
+    }
+
+    if (error || gError) {
+        signInError = <small><p className='text-red-600'>{error?.message || gError?.message}</p></small>
+    }
+
+    if (gUser) {
+        console.log(gUser);
     }
 
     const onSubmit = data => {
         console.log(data)
+        signInWithEmailAndPassword(data.email, data.password);
     };
 
 
@@ -75,7 +92,7 @@ const Login = () => {
                                 {errors.password?.type === 'minLength' && <span class="label-text-alt text-red-600">{errors.password.message}</span>}
                             </label>
                         </div>
-
+                        {signInError}
                         <input className='btn w-full max-w-xs' type="submit" value="Login" />
                     </form>
                     <div className="divider">OR</div>
