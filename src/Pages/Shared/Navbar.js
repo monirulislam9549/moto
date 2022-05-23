@@ -10,15 +10,11 @@ const Navbar = () => {
         signOut(auth);
     };
 
-
     const Items = <>
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/myportfolio">My portfolio</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
         {user ? <button onClick={logout} class="btn btn-ghost">Sign Out</button> : <li><Link to="/login">Login</Link></li>}
-
-
-
     </>
     return (
         <div className="navbar bg-primary sticky top-0 z-50">
