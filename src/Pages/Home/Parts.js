@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Part from './Part';
 
 const Parts = () => {
+    const [parts, setParts] = useState([]);
+
+    useEffect(() => {
+        fetch('fakedata.json')
+            .then(res => res.json())
+            .then(data => setParts(data))
+    }, [])
+
     return (
-        <div class="card w-96 bg-base-100 shadow-xl">
-            <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
-            <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
+        <div className='my-20 px-12'>
+            <h2 className='text-4xl text-primary font-bold text-center uppercase'>Parts We Sell</h2>
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 my-10'>
+                {
+                    parts.map(part => <Part
+                        key={part._id}
+                        part={part}
+                    ></Part>)
+                }
             </div>
         </div>
     );

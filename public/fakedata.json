@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "name": "Motorcycle-Engine-Kinroad",
+        "description": "motor cycle description",
+        "minimumorderquantity": "",
+        "availablequantity": "",
+        "price": "2000",
+        "img": "https://i.ibb.co/vXP2f9D/125cc-Motorcycle-Engine-Kinroad-156-FMI-157-FMI.jpg"
+    },
+    {
+        "_id": 2,
+        "name": "Centuro-cup-cone",
+        "description": "motor cycle description",
+        "minimumorderquantity": "",
+        "availablequantity": "",
+        "price": "40",
+        "img": "https://i.ibb.co/NTx6cTw/Centuro-cup-cone-set.jpg"
+    },
+    {
+        "_id": 3,
+        "name": "Motor-Cycle-Led",
+        "description": "motor cycle description",
+        "minimumorderquantity": "",
+        "availablequantity": "",
+        "price": "200",
+        "img": "https://i.ibb.co/86HhkY9/Motor-Cycle-Led.jpg"
+    },
+    {
+        "_id": 4,
+        "name": "Motorcycle-Brake-Shoe",
+        "description": "motor cycle description",
+        "minimumorderquantity": "",
+        "availablequantity": "",
+        "price": "500",
+        "img": "https://i.ibb.co/ZHxfQhR/Motorcycle-Brake-Shoe-for-Cg125.jpg"
+    },
+    {
+        "_id": 5,
+        "name": "Motorcycles-stunt-clutch",
+        "description": "motor cycle description",
+        "minimumorderquantity": "",
+        "available quantity": "",
+        "price": "1000",
+        "img": "https://i.ibb.co/NTsS3LF/Motorcycles-stunt-clutch.jpg"
+    },
+    {
+        "_id": 6,
+        "name": "Winter Grip",
+        "description": "motor cycle description",
+        "minimumorderquantity": "",
+        "availablequantity": "",
+        "price": "100",
+        "img": "https://i.ibb.co/Mp85rZ6/winter-grip-2.jpg"
+    }
+]
