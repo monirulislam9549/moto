@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from './Banner';
 import ExtraSections from './ExtraSections';
-import Footer from './Footer';
+import Footer from '../Shared/Footer';
 import Parts from './Parts';
 import Review from './Review';
 

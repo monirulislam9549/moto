@@ -4,7 +4,7 @@ const Part = ({ part }) => {
 
     const { name, img, description, minimumorderquantity, availablequantity, price } = part;
     return (
-        <div class="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl">
             <figure><img src={img} alt="Parts" /></figure>
             <div className='p-5'>
                 <h2>{name}</h2>
@@ -12,8 +12,8 @@ const Part = ({ part }) => {
                 <p>Available Quantity :{availablequantity}</p>
                 <p>Minium order Quantity:{minimumorderquantity}</p>
                 <p>Price $:{price}</p>
-                <div class="card-actions justify-center">
-                    <button class="btn btn-primary">Purchase</button>
+                <div className="card-actions justify-center">
+                    <button className="btn btn-primary">Purchase</button>
                 </div>
             </div>
         </div>

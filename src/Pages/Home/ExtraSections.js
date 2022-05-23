@@ -29,9 +29,9 @@ const ExtraSections = () => {
     ];
 
     return (
-        <div className='my-20 px-12'>
+        <div className='my-10 px-12'>
             <div className='text-center'>
-                <h1 className='text-primary text-xl uppercase font-bold'>Our Beloved Customer</h1>
+                <h1 className='text-primary text-xl uppercase font-bold'>Business Summery</h1>
             </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
