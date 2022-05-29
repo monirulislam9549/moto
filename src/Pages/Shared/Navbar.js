@@ -14,13 +14,18 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/myportfolio">My portfolio</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
+        {
+            user && <li><Link to="/dashboard">Dashboard</Link></li>
+        }
         {user ? <button onClick={logout} className="btn btn-ghost">Sign Out</button> : <li><Link to="/login">Login</Link></li>}
     </>
     return (
         <div className="navbar bg-primary sticky top-0 z-50">
             <div className="navbar-start">
                 <div className="dropdown">
-
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
                     <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {Items}
                     </ul>
@@ -32,7 +37,11 @@ const Navbar = () => {
                     {Items}
                 </ul>
             </div>
-
+            <div className="navbar-end">
+                <label tabindex="1" for="dashboard-sidebar" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+            </div>
         </div>
     );
 };
